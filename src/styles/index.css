@@ -1,0 +1,30 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Print Styles for Payment Slip */
+@media print {
+  @page {
+    margin: 1cm;
+  }
+
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Hide elements we don't want to print */
+  header, nav, footer, .print\:hidden {
+    display: none !important;
+  }
+
+  /* Ensure payment slip is visible when printing */
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+  
+  /* Hide action buttons when printing */
+  button {
+    display: none !important;
+  }
+}

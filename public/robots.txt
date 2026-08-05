@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://power2go.com/sitemap.xml
